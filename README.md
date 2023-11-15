@@ -22,7 +22,3 @@ Add Image
 List Images
 
 ![List Images](img/list.png "List Images")
-
-Edit Image
-
-![Edit Image](img/edit.png "Edit Image")

@@ -53,6 +53,8 @@ jobs:
           script: |
             whoami
             export IMAGE_VER=${{ github.run_number }}
+            fetch-depth: 1
+            git config --global --add safe.directory "$GITHUB_WORKSPACE"
             cd ~/app/laratm/laravel-upload-photo2 && git checkout -b main
             git pull origin main
             docker compose build

@@ -56,7 +56,7 @@ jobs:
             #                        fetch-depth: 1
             git config --global --add safe.directory "$GITHUB_WORKSPACE"
             #            cd ~/app/laratm/laravel-upload-photo2 && git checkout -b main
-            cd ~/app/laravel/ && git checkout -b main
+            cd ~/app/laravel/ && git checkout -b dev
             git pull origin main
             docker compose build
             docker compose up -d

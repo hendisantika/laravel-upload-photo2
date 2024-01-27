@@ -1,17 +1,17 @@
 version: '3.9'
 services:
     app:
-        image: hendisantika/laratm:${IMAGE_VER}
-        container_name: laratm
+        image: hendisantika/laravel:${IMAGE_VER}
+        container_name: laravel
         restart: unless-stopped
         tty: true
         volumes:
             - .env:/var/www/.env
         networks:
-            - laratm-net
+            - laravel-net
 
     nginx:
-        image: hendisantika/laratm-nginx:${IMAGE_VER}
+        image: hendisantika/laravel-nginx:${IMAGE_VER}
         container_name: nginx
         restart: unless-stopped
         tty: true
@@ -20,9 +20,9 @@ services:
         depends_on:
             - app
         networks:
-            - laratm-net
+            - laravel-net
 
 #Docker Networks
 networks:
-    laratm-net:
+    laravel-net:
         driver: bridge
